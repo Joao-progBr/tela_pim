@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Ciberya</title>
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg p-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="navbar-brand m-0 fw-bold">
+                <img class="img-logo" src="./imagens/logo_transparent_2.png" alt="">
+            </h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="ms-auto">
+                <ul class="nav nav-pills">
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#">
+                            Ajuda
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#">
+                            Contato
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <aside class="col-md-3 col-sm-3"> 
+                    <nav class=" nav-menu navbar-collapse justify-content-start" id="menu" >
+                        <ul class="nav nav-pills flex-column">
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#comunicados-avisos" class="nav-link text-start fw-bold active">
+                                <i class="bi bi-megaphone me-1"></i>Avisos
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#reservas" class="nav-link text-start fw-bold">
+                                <i class="bi bi-calendar-check me-1"></i>Reservas
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#enquetes-votacoes" class="nav-link text-start fw-bold">
+                                <i class="bi bi-hand-thumbs-up me-1"></i>Enquetes
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#visitantes" class="nav-link text-start fw-bold">
+                                <i class="bi bi-people me-1"></i>Gestão de Visitas
+                            </button>
+                            <!-- <button type="button" data-bs-toggle="tab" data-bs-target="#financeiro" class="nav-link text-start fw-bold">
+                                <i class="bi bi-currency-dollar me-1"></i>Financeiro
+                            </button> -->
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#documentos" class="nav-link text-start fw-bold">
+                                <i class="bi bi-folder me-1"></i>Documentos
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#correspondencias" class="nav-link text-start fw-bold">
+                                <i class="bi bi-envelope me-1"></i>Correspondências
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#cadastro" class="nav-link text-start fw-bold">
+                                <i class="bi bi-file-earmark-person me-1"></i>Cadastro
+                            </button>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="col-md-9 col-sm-9" >
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="comunicados-avisos">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Avisos</h1>
+                                    <div class="avisos">
+                                        <form id="form-avisos" class="pb-4">
+                                            <select name="opçoes" id="opcoes">
+                                                <option value="bloco">
+                                                    Bloco
+                                                </option>
+                                                <option value="condominio">
+                                                    Condomínio
+                                                </option>
+                                            </select>
+                                            <input type="date" placeholder="">
+                                            <button type="submit">Enviar</button>
+                                            <button type="reset" class="reset">Limpar</button>
+                                            <textarea name="" id="" placeholder="aviso"></textarea>
+                                        </form>
+                                        <table class="table">
+                                            <thead>
+                                                <th>DATA</th>
+                                                <th>PARA</th>
+                                                <th>MENSAGEM</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="reservas">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Reservas</h1>
+                                    <div class="reservas">
+                                        <form id="form-reservas" class="pb-4">
+                                            <input type="text" id="nome-reserva" placeholder="Digite seu nome">
+                                            <input type="date" id="data-reserva" placeholder="">
+                                            <button type="button" class="doc">Documentos</button>
+                                            <button type="submit">Nova reserva</button>
+                                        </form>
+                                        <table class="table table-reserva">
+                                            <thead>
+                                                <th>RESERVA</th>
+                                                <th>DATA</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                               </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="enquetes-votacoes">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Enquetes e Votação</h1>
+                                    <div class="votos">
+                                        <form id="form-votos" class="pb-4">
+                                            <button type="button" class="voto">Criar enquete</button>
+                                        </form>
+                                        <table class="table table-votos">
+                                            <thead>
+                                                <th>ENQUETE</th>
+                                                <th>QTD.PERGUNTAS</th>
+                                                <th>DATA DE ENVIO</th>
+                                                <th>ENCERRRA EM</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="tab-pane fade" id="visitantes">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Visitantes</h1>
+                                    <div class="visitas">
+                                        <form id="form-visitas" class="pb-4">
+                                            <input type="text" id="nome-visita" placeholder="Digite o nome do visitante">
+                                            <input type="datetime-local" id="data-visita">
+                                            <button type="button" class="liberar">Gerar pré-liberação</button>
+                                            <button type="submit">Enviar</button>
+                                        </form>
+                                        <table class="table table-visitas">
+                                            <thead>
+                                                <th>VISITANTE</th>
+                                                <th>DATA</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="servicos">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Solicitar Serviços</h1>
+                                    <div class="visitas">
+                                        <form id="form-visitas" class="pb-4">
+                                            <input type="text" id="nome-visita" placeholder="Digite o nome do visitante">
+                                            <input type="datetime-local" id="data-visita">
+                                            <button type="button" class="liberar">Gerar pré-liberação</button>
+                                            <button type="submit">Enviar</button>
+                                        </form>
+                                        <table class="table table-visitas">
+                                            <thead>
+                                                <th>VISITANTE</th>
+                                                <th>DATA</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <!-- <div class="tab-pane fade" id="financeiro">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Financeiro</h1>
+                                    <div class="visitas">
+                                        <form id="form-visitas" class="pb-4">
+                                            <input type="text" id="nome-visita" placeholder="Digite o nome do visitante">
+                                            <input type="datetime-local" id="data-visita">
+                                            <button type="button" class="liberar">Gerar pré-liberação</button>
+                                            <button type="submit">Enviar</button>
+                                        </form>
+                                        <table class="table table-visitas">
+                                            <thead>
+                                                <th>VISITANTE</th>
+                                                <th>DATA</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     -->
+                        <div class="tab-pane fade" id="documentos">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Documentos</h1>
+                                    <div class="documentos">
+                                        <form id="form-documentos" class="pb-4">
+                                            <button type="button" class="doc" data-bs-toggle="modal" data-bs-target="#modal">
+                                                Inserir
+                                            </button>
+                                            <button type="button">Categorias</button>
+                                            <input type="text" placeholder="Nome">
+                                        </form>
+                                        <table class="table table-documentos">
+                                            <thead>
+                                                <th>NOME</th>
+                                                <th>CATEGORIA</th>
+                                                <th>ADICIONADO EM</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal w-100" id="modal" data-bs-backdrop="static">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1>Inserir Documento</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                   <form>
+                                                        <label for="cat">Categoria</label>
+                                                        <select name="cat" class="cat w-50" id="opcoes-cat" placeholder="Selecione">
+                                                            <option value="op1">
+                                                                Opção 1
+                                                            </option>
+                                                            <option value="op2">
+                                                                Opção 2
+                                                            </option>
+                                                        </select>
+                                                        <div class="d-flex">
+                                                            <label for="documents" class="">Documento</label>
+                                                            <button type="button" class="btn-arquivo-documento">Escolher arquivo</button>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <label for="descricao">Descrição</label>
+                                                            <textarea name="descricao" id="descricao-documentos"></textarea>
+                                                        </div>
+                                                    </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="tab-pane fade" id="correspondencias">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Correspondências</h1>
+                                    <div class="correspondecia">
+                                        <form id="form-correspondencia" class="pb-4">
+                                            <button type="button" class="btn-inserir-correspondencia">Inserir</button>
+                                            <button type="button">Entregar Correspondência</button>
+                                            <div class="d-flex ms-5">
+                                                <input type="text" placeholder="Procure por unidade" class="d-block me-4">
+                                            <label for="situacao">Situação</label>
+                                            <select name="situacao">
+                                                <option value="">Pendente</option>
+                                                <option value="">Retirado</option>
+                                            </select>
+                                            <label for="periodo" class="ms-4">Periodo</label>
+                                            <input type="datetime-local">
+                                            </div>
+                                        </form>
+                                        <table class="table table-correspondencia">
+                                            <thead>
+                                                <th>Unidade</th>
+                                                <th>situação</th>
+                                                <th>Data</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="tab-pane fade" id="cadastro">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h1>Cadastrar morador</h1>
+                                    <div class="cadastro d-flex w-80">
+                                        <form id="form-cadastro" class="pb-2 w-100">
+                                            <div class="">
+                                                <label class="form-label me-4 fw-bold" for="nome">Nome</label>
+                                                <input class="form-control border-black" type="text" id="nome">
+                                            </div>
+                                            <div>
+                                                <label class="form-label me-4 fw-bold" for="cpf-morador">CPF</label>
+                                                <input class="form-control border-black" type="text" id="cpf-morador">
+                                            </div>
+                                            <div>
+                                                <label class="form-label me-2 fw-bold" for="tel-morador">Telefone</label>
+                                                <input class="form-control border-black" type="tel" id="tel-morador">
+                                            </div>
+                                            <div>
+                                                <label class="form-label me-4 fw-bold" for="email">Email</label>
+                                                <input class="form-control border-black" type="email" id="email">
+                                            </div>
+
+                                            <h2 class="mt-5">Endereço do Condomínio</h2>
+                                            <div>
+                                                <label class="form-label me-5 fw-bold" for="end">Bloco ou Rua</label>
+                                                <input class="form-control border-black" type="text" id="end">
+                                            </div>
+                                            <div>
+                                                <label class="form-label me-5 fw-bold" for="numero">Número</label>
+                                                <input class="form-control border-black" type="number" id="numero">
+                                            </div>
+
+                                            <h2 class="mt-5">Informações sobre veículos</h2>
+                                            <div>   
+                                                <label class="form-label me-5 fw-bold" for="marca">Marca</label>
+                                                <input class="form-control border-black" type="text" id="marca">
+                                            </div>
+                                            <div>   
+                                                <label class="form-label me-5 fw-bold" for="modelo">Modelo</label>
+                                                <input class="form-control border-black" type="text" id="modelo">
+                                            </div>
+                                            <div>   
+                                                <label class="form-label me-5 fw-bold" for="ano">Ano</label>
+                                                <input class="form-control border-black" type="number" id="ano">
+                                            </div>
+                                            <div>   
+                                                <label class="form-label me-5 fw-bold" for="placa-veiculo">Placa</label>
+                                                <input class="form-control border-black" type="text" id="placa-veiculo">
+                                            </div>
+                                            <div>   
+                                                <label class="form-label me-5 fw-bold" for="cor">Cor</label>
+                                                <input class="form-control border-black" type="text" id="cor">
+                                            </div>
+                                            <div>
+                                                <input class="form-check-input" type="checkbox" name="" id="termos">
+                                                <label class="form-check-label fw-bold" for="termos">Não possui veículo</label>
+                                            </div>
+
+                                            <h2 class="mt-5">Informações sobre Dependentes</h2>
+                                            <div>
+                                                <label class="form-label me-5 fw-bold" for="nome-dependente">Nome</label>
+                                                <input class="form-control border-black" type="text" id="nome-dependente">
+                                            </div>
+                                            <div>
+                                                <label class="form-label me-5 fw-bold" for="cpf-dependente">CPF</label>
+                                                <input class="form-control border-black" type="text" id="cpf-dependente">
+                                            </div>
+                                            <div>
+                                                <label class="form-label me-5 fw-bold" for="relacao-dependente">Relação</label>
+                                                <input class="form-control border-black" type="text" id="relacao-dependente">
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" class="btn-cadastro-morador" >Cadastrar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./plugins.js/jquery.mask.min.js"></script>
+    <script src="./script.js"></script>
+
+
+</body>
+</html>
